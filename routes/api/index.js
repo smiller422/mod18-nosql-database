@@ -1,21 +1,8 @@
-// const router = require('express').Router();
-// // const videoRoutes = require('./videoRoutes');
-// const userRoutes = require('./userRoutes');
-
-// // router.use('/videos', videoRoutes);
-// router.use('/users', userRoutes);
-
-// module.exports = router;
-
-
-
 const router = require('express').Router();
-const apiRoutes = require('./api');
+const thoughtsRoutes = require('./thoughtsRoutes');
+const usersRoutes = require('./usersRoutes');
 
-router.use('/api', apiRoutes);
-
-router.use((req, res) => {
-  return res.send('Wrong route!');
-});
+router.use('/thoughts', thoughtsRoutes);
+router.use('/users', usersRoutes);
 
 module.exports = router;

@@ -1,3 +1,6 @@
+
+
+
 const router = require('express').Router();
 const {
   getUsers,
@@ -10,5 +13,7 @@ router.route('/').get(getUsers).post(createUser);
 
 // /api/users/:userId
 router.route('/:userId').get(getSingleUser);
+
+// router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
 
 module.exports = router;
