@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction');
 
 // Schema to create thought model
 const thoughtSchema = new Schema(
   {
-  
-    createdAt: {
+   createdAt: {
       type: Date,
       default: Date.now,
     },
